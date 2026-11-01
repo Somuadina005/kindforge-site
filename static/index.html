@@ -247,19 +247,11 @@ section{padding:60px 0}
 <div class="cta"><a class="btn" href="mailto:kindforgetech@gmail.com?subject=KINDFORGE%20Insights%20inquiry">Email kindforgetech@gmail.com</a></div>
 </div></section>
 
-<section style="background:var(--surface)" id="connect"><div class="wrap cgrid">
+<section style="background:var(--surface)" id="connect"><div class="wrap">
 <div><h2>Let’s connect.</h2>
 <p class="lead" style="margin-top:18px">Investors, funders, partners, press, and anyone who wants to help kids build instead of scroll. Tell us who you are and what you have in mind.</p>
 <p>You can also write to us directly at <a href="mailto:kindforgetech@gmail.com">kindforgetech@gmail.com</a>.</p></div>
-<form class="cf" id="cf" novalidate>
-<label for="n">Your name</label><input id="n" name="n" autocomplete="name" required>
-<label for="e">Your email</label><input id="e" name="e" type="email" autocomplete="email" required>
-<label for="r">I am a</label><select id="r" name="r"><option>Investor</option><option>Funder or grant body</option><option>Partner organization</option><option>School or counselor</option><option>Parent</option><option>Press</option><option>Other</option></select>
-<label for="m">Message</label><textarea id="m" name="m" required></textarea>
-<input name="h" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-<button class="btn" type="submit">Send message</button>
-<p id="st" role="status" aria-live="polite"></p>
-</form></div></section>
+</div></section>
 </main>
 
 <footer><div class="wrap"><span>© 2026 KINDFORGE Technologies LLC · Maryland, USA</span><span>Not less technology. Better technology.</span></div></footer>
@@ -292,17 +284,6 @@ var b=document.createElement("button");b.className="chip";b.type="button";b.inne
 b.addEventListener("click",function(){show(i)});chips.appendChild(b);
 });
 show(2);
-var f=document.getElementById("cf"),st=document.getElementById("st");
-f.addEventListener("submit",function(ev){
-ev.preventDefault();
-var n=f.elements.n.value.trim(),e=f.elements.e.value.trim(),r=f.elements.r.value,m=f.elements.m.value.trim(),btn=f.querySelector("button");
-if(!n||!m||!e||!f.elements.e.checkValidity()){st.textContent="Please add your name, a valid email, and a message.";return}
-btn.disabled=true;st.textContent="Sending…";
-fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:n,email:e,role:r,message:m,website:f.elements.h.value})})
-.then(function(res){if(!res.ok)throw new Error("fail");f.reset();st.textContent="Thanks. Your message reached the KINDFORGE team, and we’ll reply by email."})
-.catch(function(){st.textContent="Something went wrong. Please email kindforgetech@gmail.com directly."})
-.then(function(){btn.disabled=false});
-});
 })();
 </script>
 </body>
