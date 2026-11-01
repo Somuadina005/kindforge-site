@@ -7,6 +7,7 @@
 <meta name="description" content="KINDFORGE Insights helps kids ages 8 to 14 discover who they are beyond the screen, through real-world creator challenges.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F3F8F7;--surface:#fff;--ink:#0F2A2C;--muted:#4B6567;--line:#CFE0DE;--brand:#0F766E;--brand-ink:#fff;--gold:#F2B632;--deep:#0F2A2C;--deep-ink:#F3F8F7;--c:#0F766E;
@@ -30,7 +31,8 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px s
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
 nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .logo{font:800 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.02em}
-.logo b{color:var(--brand)}
+.logo{display:inline-flex;align-items:center;gap:10px}.logo img{display:block;width:36px;height:36px;object-fit:contain}.logo b{color:var(--brand)}
+.soon{display:inline-block;vertical-align:middle;font:700 .7rem Figtree,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--gold);color:#0F2A2C;border-radius:999px;padding:5px 11px;margin-left:10px}.soon.sm{font-size:.62rem;padding:3px 8px;margin-left:6px}
 .links{display:flex;gap:22px;align-items:center}
 .links a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.97rem}
 .links a:hover{color:var(--brand)}
@@ -113,8 +115,8 @@ section{padding:60px 0}
 </head>
 <body>
 <header><div class="wrap"><nav aria-label="Main">
-<a class="logo" href="#top">KIND<b>FORGE</b></a>
-<div class="links"><a href="#how">How it works</a><a href="#schools">Schools</a><a href="#families">Families</a><a href="#privacy">Privacy</a><a href="#team">Team</a><a href="#faq">FAQ</a><a href="#connect">Let’s connect</a><a class="btn" href="#contact">Request a pilot</a></div>
+<a class="logo" href="#top"><img src="logo.png" alt="" width="36" height="36">KIND<b>FORGE</b></a>
+<div class="links"><a href="#how">How it works</a><a href="#families">Families</a><a href="#schools">Schools <span class="soon sm">Soon</span></a><a href="#privacy">Privacy</a><a href="#team">Team</a><a href="#faq">FAQ</a><a href="#connect">Let’s connect</a><a class="btn" href="#contact">Get in touch</a></div>
 </nav></div></header>
 
 <main id="top">
@@ -122,7 +124,7 @@ section{padding:60px 0}
 <div>
 <h1>We don’t fight screens. We are building something more powerful.</h1>
 <p class="lead">KINDFORGE Insights helps kids ages 8 to 14 find out who they are beyond the screen. Real challenges. Real things built. A strength they can name.</p>
-<div class="cta"><a class="btn" href="#contact">Request a school pilot</a><a class="btn alt" href="#how">See how it works</a></div>
+<div class="cta"><a class="btn" href="#families">Start with your family</a><a class="btn alt" href="#how">See how it works</a></div>
 </div>
 <div class="picker" aria-labelledby="pk">
 <small id="pk">Every kid is one of six creators. Tap one to see what they build.</small>
@@ -170,25 +172,26 @@ section{padding:60px 0}
 </div>
 </div></section>
 
-<section style="background:var(--surface)" id="schools"><div class="wrap">
-<h2>For schools: a counselor tool that starts small.</h2>
-<p class="lead" style="margin-top:18px">Counselors see who is engaged and who is drifting, with conversation prompts they can use right away. Insights works in a browser on any device, with no app store download.</p>
-<div class="two">
-<div class="box feat"><h3>School subscription</h3><div class="price">$3,500 <small>per year</small></div>
-<ul><li>Counselor dashboard</li><li>Student referral tools</li><li>Early warning flags</li><li>Family engagement tracking</li></ul></div>
-<div class="box"><h3>How a pilot works</h3>
-<ul><li>Meet with administrators and counselors for a 20-minute live demo.</li><li>Run a free pilot so students, parents, and counselors can see the value first.</li><li>Review usage data together, then decide on a contract.</li></ul>
-<p style="margin:14px 0 0">We are starting with students ages 12 to 14 at private and independent middle schools, then expanding.</p></div>
-</div>
-</div></section>
-
-<section id="families"><div class="wrap">
+<section style="background:var(--surface)" id="families"><div class="wrap">
 <h2>For families: one place to see your child grow.</h2>
 <p class="lead" style="margin-top:18px">Parents get encouraging progress updates, language for what they’re seeing, and three local, verified offline activities matched to their child.</p>
 <div class="two">
 <div class="box feat"><h3>Insights Family</h3><div class="price">$9.99 <small>per month</small></div>
 <ul><li>Full intake and engagement-driver insight</li><li>Challenge hub and Creator Identity</li><li>Progress reports and a growing portfolio</li></ul></div>
 <div class="box"><h3>Measured at 30, 60, and 90 days</h3><p style="margin-top:10px">Short check-ins track recreational screen time, offline activity, confidence, and what parents observe. We report real change, not guesses.</p></div>
+</div>
+</div></section>
+
+<section id="schools"><div class="wrap">
+<h2>For schools: a counselor tool that starts small. <span class="soon">Coming soon</span></h2>
+<p class="lead" style="margin-top:18px">Counselors see who is engaged and who is drifting, with conversation prompts they can use right away. Insights works in a browser on any device, with no app store download.</p>
+<p style="margin:14px 0 0"><strong>Schools are coming soon.</strong> We are opening family access first. Counselors and administrators can leave their details below and we will reach out when pilots open.</p>
+<div class="two">
+<div class="box feat"><h3>School subscription</h3><div class="price">$3,500 <small>per year</small></div>
+<ul><li>Counselor dashboard</li><li>Student referral tools</li><li>Early warning flags</li><li>Family engagement tracking</li></ul></div>
+<div class="box"><h3>How a pilot works</h3>
+<ul><li>Meet with administrators and counselors for a 20-minute live demo.</li><li>Run a free pilot so students, parents, and counselors can see the value first.</li><li>Review usage data together, then decide on a contract.</li></ul>
+<p style="margin:14px 0 0">We are starting with students ages 12 to 14 at private and independent middle schools, then expanding.</p></div>
 </div>
 </div></section>
 
@@ -208,11 +211,11 @@ section{padding:60px 0}
 <h2>Where we’re headed.</h2>
 <ol class="timeline" style="list-style:none">
 <li><strong>2026: Build year</strong><p>Platform development, grants, and hiring. KINDFORGE Technologies LLC was filed in Maryland in March 2026.</p></li>
-<li><strong>2027: Beta and first schools</strong><p>Pilots with 3 to 10 partner schools in Maryland, Colorado, and Delaware. First engagement and outcome data.</p></li>
-<li><strong>2028: Growth</strong><p>More districts, 1,000 young people served, and federal and foundation grant applications.</p></li>
+<li><strong>2027: Beta and family launch</strong><p>We launch KINDFORGE Insights to families nationwide, with a focus on Maryland, Colorado, and Delaware, and gather our first engagement and outcome data.</p></li>
+<li><strong>2028: Growth</strong><p>We open pilots with 3 to 10 partner schools in Maryland, Colorado, and Delaware, then add more districts, reach 1,000 young people, and apply for federal and foundation grants.</p></li>
 <li><strong>2029 and beyond: Evidence and scale</strong><p>University partners evaluate outcomes and findings get published. Then expansion across the country.</p></li>
 </ol>
-<div class="box" style="margin-top:18px"><h3>Coming next: KINDFORGE Labs</h3><p style="margin:10px 0 0">An in-person program of workshops, mentors, and community projects that takes each student’s Insights results into the real world.</p></div>
+<div class="box" style="margin-top:18px"><h3>Coming next: KINDFORGE Labs</h3><p style="margin:10px 0 0">An in-person program of workshops, mentors, and community projects that brings each student’s Insights results to life in the real world.</p></div>
 </div></section>
 
 <section style="background:var(--surface)" id="team"><div class="wrap">
@@ -234,14 +237,14 @@ section{padding:60px 0}
 <details><summary>What if my child doesn’t fit one identity?</summary><p>Identity isn’t fixed. It shifts as kids try new things. We’re also planning an Explorer Path for students whose interests don’t point to one identity yet.</p></details>
 <details><summary>What ages is it for?</summary><p>Ages 8 to 14. We’re starting with ages 12 to 14 in partner schools, then adding ages 8 to 11.</p></details>
 <details><summary>Who can see my child’s data?</summary><p>Parents consent at signup and can delete everything with one tap, any time. Student data is never sold. School partners sign a FERPA Data Processing Agreement.</p></details>
-<details><summary>What does it cost?</summary><p>Families pay $9.99 per month. Schools pay $3,500 per year, and start with a free pilot.</p></details>
+<details><summary>What does it cost?</summary><p>Families pay $9.99 per month. School subscriptions are coming soon, at $3,500 per year with a free pilot first.</p></details>
 </div>
 </div></section>
 
 <section class="contact" id="contact"><div class="wrap">
-<h2>Bring KINDFORGE to your school.</h2>
-<p class="lead" style="margin-top:18px">Tell us about your school or organization. We’ll set up a demo.</p>
-<div class="cta"><a class="btn" href="mailto:kindforgetech@gmail.com?subject=KINDFORGE%20Insights%20pilot%20request">Email kindforgetech@gmail.com</a></div>
+<h2>Bring KINDFORGE to your family.</h2>
+<p class="lead" style="margin-top:18px">Tell us about your family or organization. Schools and counselors: pilots are coming soon, and we’ll reach out when they open.</p>
+<div class="cta"><a class="btn" href="mailto:kindforgetech@gmail.com?subject=KINDFORGE%20Insights%20inquiry">Email kindforgetech@gmail.com</a></div>
 </div></section>
 
 <section style="background:var(--surface)" id="connect"><div class="wrap cgrid">
