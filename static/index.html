@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KINDFORGE Technologies: Build something more powerful than a screen</title>
+<meta name="description" content="KINDFORGE Insights helps kids ages 8 to 14 discover who they are beyond the screen, through real-world creator challenges.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F8F7;--surface:#fff;--ink:#0F2A2C;--muted:#4B6567;--line:#CFE0DE;--brand:#0F766E;--brand-ink:#fff;--gold:#F2B632;--deep:#0F2A2C;--deep-ink:#F3F8F7;--c:#0F766E;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1B1D;--surface:#12292C;--ink:#EAF5F3;--muted:#9FC0BC;--line:#244548;--brand:#2DD4BF;--brand-ink:#0B1B1D;--deep:#071213}}
+:root[data-theme="dark"]{--bg:#0B1B1D;--surface:#12292C;--ink:#EAF5F3;--muted:#9FC0BC;--line:#244548;--brand:#2DD4BF;--brand-ink:#0B1B1D;--deep:#071213}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700;max-width:20ch}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.lead{color:var(--muted);font-size:1.15rem}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:800 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.02em}
+.logo b{color:var(--brand)}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.97rem}
+.links a:hover{color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--brand)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.hero{padding:64px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero .lead{margin:22px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.picker{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.picker small{display:block;color:var(--muted);margin-bottom:12px;font-weight:500}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chip{display:flex;flex-direction:column;align-items:center;gap:6px;font:600 .98rem Figtree,sans-serif;padding:12px 6px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.panel{margin-top:16px;padding:18px;border-radius:14px;border-left:8px solid var(--c);background:var(--bg)}
+.panel h3{font-size:1.5rem}
+.panel dl{margin:12px 0 0;display:grid;gap:10px}
+.panel dt{font-weight:600;font-size:.9rem;color:var(--muted)}
+.panel dd{margin:0}
+.chip svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 30px;margin:0 0 64px;padding:18px 0;border-block:1px solid var(--line);font-weight:600;font-size:.95rem}
+.trust li::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-right:10px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0;max-width:760px}
+.faq summary{font:700 1.15rem "Bricolage Grotesque",sans-serif;cursor:pointer}
+.faq details p{margin:10px 0 0;color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.cf label{display:block;font-weight:600;margin-bottom:6px}
+.cf input,.cf select,.cf textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:16px}
+.cf textarea{min-height:130px;resize:vertical}
+.cf button{cursor:pointer;font:600 1.0625rem Figtree,sans-serif}
+#st{margin:14px 0 0;color:var(--muted)}
+@media (max-width:900px){.cgrid{grid-template-columns:1fr;gap:28px}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.stat{border-top:4px solid var(--gold);padding-top:14px}
+.stat strong{display:block;font:800 2.6rem "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.stat span{color:var(--muted)}
+.dark{background:var(--deep);color:var(--deep-ink)}
+.dark .lead,.dark p{color:#BFDCD8}
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid #2F6B68;padding-top:16px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#0F2A2C;font-weight:800;margin-bottom:12px}
+.steps p{font-size:.98rem;margin:6px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.box.feat{border:2px solid var(--brand)}
+.price{font:800 2.4rem "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:10px 0}
+.price small{font:500 1rem Figtree,sans-serif;color:var(--muted)}
+.box ul,.tick{padding-left:20px;margin:0}
+.box li,.tick li{margin-bottom:8px}
+.drivers{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}
+.drv{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.drv h3{font-size:1.05rem;margin-bottom:6px}
+.drv p{font-size:.93rem;color:var(--muted);margin:0}
+.timeline{margin:36px 0 0;padding:0;list-style:none;border-left:3px solid var(--line)}
+.timeline li{padding:0 0 26px 24px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-10px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:4px solid var(--brand)}
+.timeline strong{font:700 1.1rem "Bricolage Grotesque",sans-serif}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.person{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font:800 1.2rem "Bricolage Grotesque",sans-serif;color:#fff;margin-bottom:14px}
+.person .role{color:var(--brand);font-weight:600;font-size:.95rem;margin-bottom:8px}
+.person p{font-size:.93rem;color:var(--muted);margin:0}
+.award{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:8px solid var(--gold);border-radius:14px;padding:20px 24px;margin-top:36px}
+.contact{text-align:center}
+.contact h2,.contact p{margin-left:auto;margin-right:auto}
+.contact .cta{justify-content:center;margin-top:22px}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:.93rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:900px){
+.hero-grid,.two{grid-template-columns:1fr}
+.steps,.team{grid-template-columns:1fr 1fr}
+.drivers{grid-template-columns:1fr 1fr}
+.links a:not(.btn){display:none}
+section{padding:60px 0}
+}
+@media (max-width:560px){.steps,.team,.drivers,.stats{grid-template-columns:1fr}.chips{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top">KIND<b>FORGE</b></a>
+<div class="links"><a href="#how">How it works</a><a href="#schools">Schools</a><a href="#families">Families</a><a href="#privacy">Privacy</a><a href="#team">Team</a><a href="#faq">FAQ</a><a href="#connect">Let’s connect</a><a class="btn" href="#contact">Request a pilot</a></div>
+</nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<h1>We don’t fight screens. We are building something more powerful.</h1>
+<p class="lead">KINDFORGE Insights helps kids ages 8 to 14 find out who they are beyond the screen. Real challenges. Real things built. A strength they can name.</p>
+<div class="cta"><a class="btn" href="#contact">Request a school pilot</a><a class="btn alt" href="#how">See how it works</a></div>
+</div>
+<div class="picker" aria-labelledby="pk">
+<small id="pk">Every kid is one of six creators. Tap one to see what they build.</small>
+<div class="chips" id="chips"></div>
+<div class="panel" id="panel" aria-live="polite"></div>
+</div>
+</div></section>
+
+<div class="wrap"><ul class="trust"><li>2026 Bernstein Competition winner</li><li>Maryland social impact LLC</li><li>COPPA and FERPA built in</li><li>Works in any browser, no app download</li></ul></div>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Screens win because nothing else is on offer.</h2>
+<p class="lead" style="margin-top:18px">For a kid with few clubs, leagues, or tutors nearby, the phone fills every empty hour. Taking it away leaves the empty hour. KINDFORGE fills it with something better.</p>
+<div class="stats">
+<div class="stat"><strong>60%+</strong><span>of American teens show signs of smartphone dependency</span></div>
+<div class="stat"><strong>7+ hrs</strong><span>average daily recreational screen time for teens</span></div>
+<div class="stat"><strong>2023</strong><span>year the U.S. Surgeon General issued a formal advisory on the issue</span></div>
+</div>
+</div></section>
+
+<section class="dark" id="how"><div class="wrap">
+<h2>Identity is found through action, not a quiz.</h2>
+<p class="lead" style="margin-top:18px">Kids don’t pick a label. They try things, and the platform watches what they keep coming back to.</p>
+<ol class="steps">
+<li><h3>Intake</h3><p>A short assessment of interests, work style, goals, and current screen habits. It starts a profile. It doesn’t fix an identity.</p></li>
+<li><h3>Creator challenges</h3><p>Hands-on, offline challenges: build a LEGO structure from your own blueprint, record a podcast, plan a fundraiser.</p></li>
+<li><h3>Proof through performance</h3><p>Completion, time invested, enjoyment, reflections, and portfolio work show what a kid really enjoys.</p></li>
+<li><h3>Creator Identity</h3><p>The student gets a primary identity, a strengths profile, career pathway ideas, and a growing portfolio. It keeps evolving.</p></li>
+</ol>
+</div></section>
+
+<section><div class="wrap">
+<h2>We find out why a kid reaches for the screen.</h2>
+<p class="lead" style="margin-top:18px">KINDFORGE identifies each student’s main engagement driver, then responds with offline activities that meet the same need.</p>
+<div class="drivers">
+<div class="drv"><h3>Connection seeking</h3><p>Uses technology for belonging. We offer collaborative challenges and mentoring.</p></div>
+<div class="drv"><h3>Exploration seeking</h3><p>Lacks offline challenge. We offer hands-on projects that spark curiosity.</p></div>
+<div class="drv"><h3>Stress relief</h3><p>Uses screens to avoid hard feelings. We offer low-pressure creative activities.</p></div>
+<div class="drv"><h3>High stimulation</h3><p>Wants fast, intense input. We offer project challenges with frequent milestones.</p></div>
+<div class="drv"><h3>Habitual use</h3><p>Screen use is routine. We build new habits with rewarding offline replacements.</p></div>
+</div>
+<div class="two">
+<div class="box"><h3>KindForge Points reward action, not app time</h3><p style="margin-top:10px">Students earn points for finishing challenges, keeping streaks, serving their community, and hitting milestones. Points unlock profile customization, advanced challenges, badges, and KINDFORGE merchandise.</p></div>
+<div class="box"><h3>Recognition for everyone</h3><p style="margin-top:10px">Badges and streaks celebrate consistency, creativity, leadership, and community impact. Optional leaderboards reward effort and improvement, not only total points.</p></div>
+</div>
+</div></section>
+
+<section style="background:var(--surface)" id="schools"><div class="wrap">
+<h2>For schools: a counselor tool that starts small.</h2>
+<p class="lead" style="margin-top:18px">Counselors see who is engaged and who is drifting, with conversation prompts they can use right away. Insights works in a browser on any device, with no app store download.</p>
+<div class="two">
+<div class="box feat"><h3>School subscription</h3><div class="price">$3,500 <small>per year</small></div>
+<ul><li>Counselor dashboard</li><li>Student referral tools</li><li>Early warning flags</li><li>Family engagement tracking</li></ul></div>
+<div class="box"><h3>How a pilot works</h3>
+<ul><li>Meet with administrators and counselors for a 20-minute live demo.</li><li>Run a free pilot so students, parents, and counselors can see the value first.</li><li>Review usage data together, then decide on a contract.</li></ul>
+<p style="margin:14px 0 0">We are starting with students ages 12 to 14 at private and independent middle schools, then expanding.</p></div>
+</div>
+</div></section>
+
+<section id="families"><div class="wrap">
+<h2>For families: one place to see your child grow.</h2>
+<p class="lead" style="margin-top:18px">Parents get encouraging progress updates, language for what they’re seeing, and three local, verified offline activities matched to their child.</p>
+<div class="two">
+<div class="box feat"><h3>Insights Family</h3><div class="price">$9.99 <small>per month</small></div>
+<ul><li>Full intake and engagement-driver insight</li><li>Challenge hub and Creator Identity</li><li>Progress reports and a growing portfolio</li></ul></div>
+<div class="box"><h3>Measured at 30, 60, and 90 days</h3><p style="margin-top:10px">Short check-ins track recreational screen time, offline activity, confidence, and what parents observe. We report real change, not guesses.</p></div>
+</div>
+</div></section>
+
+<section class="dark" id="privacy"><div class="wrap">
+<h2>Kids’ data is protected first.</h2>
+<p class="lead" style="margin-top:18px">KINDFORGE serves children as young as 8, so privacy is built in from the start.</p>
+<ul class="tick" style="margin-top:24px;max-width:62ch">
+<li>Parental consent at signup, and one-tap permanent deletion at any time.</li>
+<li>Names and ZIP codes never go into AI processing, and the AI makes no diagnoses or clinical recommendations.</li>
+<li>All data is encrypted at rest and in transit.</li>
+<li>We never sell student data. It is written into our Terms of Service.</li>
+<li>Every school partnership runs under a signed FERPA Data Processing Agreement.</li>
+</ul>
+</div></section>
+
+<section><div class="wrap">
+<h2>Where we’re headed.</h2>
+<ol class="timeline" style="list-style:none">
+<li><strong>2026: Build year</strong><p>Platform development, grants, and hiring. KINDFORGE Technologies LLC was filed in Maryland in March 2026.</p></li>
+<li><strong>2027: Beta and first schools</strong><p>Pilots with 3 to 10 partner schools in Maryland, Colorado, and Delaware. First engagement and outcome data.</p></li>
+<li><strong>2028: Growth</strong><p>More districts, 1,000 young people served, and federal and foundation grant applications.</p></li>
+<li><strong>2029 and beyond: Evidence and scale</strong><p>University partners evaluate outcomes and findings get published. Then expansion across the country.</p></li>
+</ol>
+<div class="box" style="margin-top:18px"><h3>Coming next: KINDFORGE Labs</h3><p style="margin:10px 0 0">An in-person program of workshops, mentors, and community projects that takes each student’s Insights results into the real world.</p></div>
+</div></section>
+
+<section style="background:var(--surface)" id="team"><div class="wrap">
+<h2>The team.</h2>
+<div class="team">
+<div class="person"><div class="avatar" style="background:#0F766E">HB</div><h3>Hasanatou Barry</h3><div class="role">CEO &amp; Founder</div><p>Finance graduate of UMES with four years in childcare and youth development. Founded KINDFORGE in 2026.</p></div>
+<div class="person"><div class="avatar" style="background:#1D6FA5">ZS</div><h3>Zachary Solembrino</h3><div class="role">Chief Financial Officer</div><p>UMES Finance graduate with a 4.0. Starting an accelerated MBA at Salisbury University in Fall 2026.</p></div>
+<div class="person"><div class="avatar" style="background:#D9488A">SE</div><h3>Somuadina Egbulam</h3><div class="role">Lead Technology Consultant</div><p>UMES Computer Science graduate (Business Applications). Leads technology strategy and software implementation.</p></div>
+<div class="person"><div class="avatar" style="background:#B8860B">WA</div><h3>Bill Anderson</h3><div class="role">Senior Strategic Advisor</div><p>40 years in international business and government. Angel investing board member and former entrepreneurship professor.</p></div>
+</div>
+<div class="award"><div><h3>2026 Bernstein Competition winner</h3><p style="margin:6px 0 0">Sponsored by the Perdue School of Business at Salisbury University. Awarded $5,000 in funding and $5,000 in consulting through BEACON.</p></div></div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+<h2>Questions parents and counselors ask.</h2>
+<div style="margin-top:28px">
+<details><summary>Does KINDFORGE limit or block screen time?</summary><p>No. Restriction alone leaves the empty hour behind. KINDFORGE gives kids offline challenges worth choosing instead, so screen use drops because something better is competing with it.</p></details>
+<details><summary>Does AI decide my child’s Creator Identity?</summary><p>The identity comes from KINDFORGE’s own scoring framework, built on the intake, challenge results, and engagement. An AI-assisted engine reads anonymized data to spot a student’s main engagement driver. It never sees names or ZIP codes, and it makes no diagnoses.</p></details>
+<details><summary>What if my child doesn’t fit one identity?</summary><p>Identity isn’t fixed. It shifts as kids try new things. We’re also planning an Explorer Path for students whose interests don’t point to one identity yet.</p></details>
+<details><summary>What ages is it for?</summary><p>Ages 8 to 14. We’re starting with ages 12 to 14 in partner schools, then adding ages 8 to 11.</p></details>
+<details><summary>Who can see my child’s data?</summary><p>Parents consent at signup and can delete everything with one tap, any time. Student data is never sold. School partners sign a FERPA Data Processing Agreement.</p></details>
+<details><summary>What does it cost?</summary><p>Families pay $9.99 per month. Schools pay $3,500 per year, and start with a free pilot.</p></details>
+</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<h2>Bring KINDFORGE to your school.</h2>
+<p class="lead" style="margin-top:18px">Tell us about your school or organization. We’ll set up a demo.</p>
+<div class="cta"><a class="btn" href="mailto:kindforgetech@gmail.com?subject=KINDFORGE%20Insights%20pilot%20request">Email kindforgetech@gmail.com</a></div>
+</div></section>
+
+<section style="background:var(--surface)" id="connect"><div class="wrap cgrid">
+<div><h2>Let’s connect.</h2>
+<p class="lead" style="margin-top:18px">Investors, funders, partners, press, and anyone who wants to help kids build instead of scroll. Tell us who you are and what you have in mind.</p>
+<p>You can also write to us directly at <a href="mailto:kindforgetech@gmail.com">kindforgetech@gmail.com</a>.</p></div>
+<form class="cf" id="cf" novalidate>
+<label for="n">Your name</label><input id="n" name="n" autocomplete="name" required>
+<label for="e">Your email</label><input id="e" name="e" type="email" autocomplete="email" required>
+<label for="r">I am a</label><select id="r" name="r"><option>Investor</option><option>Funder or grant body</option><option>Partner organization</option><option>School or counselor</option><option>Parent</option><option>Press</option><option>Other</option></select>
+<label for="m">Message</label><textarea id="m" name="m" required></textarea>
+<input name="h" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+<button class="btn" type="submit">Send message</button>
+<p id="st" role="status" aria-live="polite"></p>
+</form></div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 KINDFORGE Technologies LLC · Maryland, USA</span><span>Not less technology. Better technology.</span></div></footer>
+
+<script>
+(function(){
+var D=[
+{n:"Architect",c:"#3B6FD8",w:"Builds systems, structures, and plans. Finds order in complexity.",s:"Design, engineering, building, planning",t:"Design a bedroom layout or build a LEGO structure from your own blueprint."},
+{n:"Storyteller",c:"#C23A7A",w:"Makes sense of the world through stories and people. Moves others with words and images.",s:"Writing, film, podcasting, journalism",t:"Interview a family member or record a podcast episode."},
+{n:"Engineer",c:"#0B7469",w:"Needs to know how things work, and loves taking them apart to build them better.",s:"Coding, electronics, robotics, science",t:"Build a simple invention or complete a STEM experiment."},
+{n:"Artist",c:"#B4530F",w:"Turns inner experience into something you can see, touch, or wear.",s:"Drawing, photography, murals, fashion",t:"Take a photography challenge or sketch a fashion design."},
+{n:"Strategist",c:"#4F7A28",w:"Moves people and resources toward a goal. A natural leader who organizes and persuades.",s:"Leadership, debate, community organizing",t:"Plan a fundraiser or organize a team activity."},
+{n:"Connector",c:"#8A6400",w:"Brings people together and builds belonging. Strong social intelligence.",s:"Peer mentoring, mediation, event planning",t:"Mentor a younger student or organize a school event."}
+];
+var chips=document.getElementById("chips"),panel=document.getElementById("panel"),root=document.querySelector(".picker");
+function show(i){
+var d=D[i];root.style.setProperty("--c",d.c);
+[].forEach.call(chips.children,function(b,j){b.setAttribute("aria-pressed",j===i?"true":"false")});
+panel.textContent="";
+var h=document.createElement("h3");h.textContent="The "+d.n;panel.appendChild(h);
+var p=document.createElement("p");p.style.margin="6px 0 0";p.textContent=d.w;panel.appendChild(p);
+var dl=document.createElement("dl");
+[["Natural strengths",d.s],["Try this challenge",d.t]].forEach(function(r){
+var dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=r[0];dd.textContent=r[1];dl.appendChild(dt);dl.appendChild(dd)});
+panel.appendChild(dl);
+}
+var G=['<rect x="4" y="4" width="16" height="16"/><path d="M4 12h16M12 4v16"/>','<path d="M4 5h16v11H9l-5 4z"/>','<circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>','<path d="M4 20c0-4 3-4 3-7l9-9 4 4-9 9c-3 0-3 3-7 3z"/>','<path d="M6 21V4M6 5h12l-3 4 3 4H6"/>','<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>'];
+D.forEach(function(d,i){
+var b=document.createElement("button");b.className="chip";b.type="button";b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+G[i]+'</svg><span>'+d.n+'</span>';
+b.addEventListener("click",function(){show(i)});chips.appendChild(b);
+});
+show(2);
+var f=document.getElementById("cf"),st=document.getElementById("st");
+f.addEventListener("submit",function(ev){
+ev.preventDefault();
+var n=f.elements.n.value.trim(),e=f.elements.e.value.trim(),r=f.elements.r.value,m=f.elements.m.value.trim(),btn=f.querySelector("button");
+if(!n||!m||!e||!f.elements.e.checkValidity()){st.textContent="Please add your name, a valid email, and a message.";return}
+btn.disabled=true;st.textContent="Sending…";
+fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:n,email:e,role:r,message:m,website:f.elements.h.value})})
+.then(function(res){if(!res.ok)throw new Error("fail");f.reset();st.textContent="Thanks. Your message reached the KINDFORGE team, and we’ll reply by email."})
+.catch(function(){st.textContent="Something went wrong. Please email kindforgetech@gmail.com directly."})
+.then(function(){btn.disabled=false});
+});
+})();
+</script>
+</body>
+</html>
